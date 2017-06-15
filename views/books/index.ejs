@@ -1,0 +1,65 @@
+<% include ../partials/header %>
+
+
+<div class="container-fluid">
+    <button type="button" id="filterbtn" class="btn btn-success btn-lg position-fixed" data-toggle="collapse" data-target="#filter">Click to Filter</button>
+    <div class="collapse" id="filter">
+        <div class="jumbotron">
+            <form action="/books/filter" method="POST" class="form-inline">
+                
+                <div class="form-group">
+                    <label for="branch">Department:</label>
+                    <select class="form-control sel1" name="department">
+                        <option>Applied Science</option>
+                        <option>CSE</option>
+                        <option>ME</option>
+                        <option>Civil</option>
+                        <option>ECE</option>
+                        <option value="mba">MBA</option>
+                        <option value="MBA">MBA</option>
+                        <option value="MCA">MCA</option>
+                        <option value="BBA">BBA</option>
+                        <option value="BCOM">BCOM</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label>
+                    Semester:
+                        <select name="semester">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                        </select> 
+                    </label>
+
+                </div>
+                <button class="btn btn-info">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- END OF FILTER -->
+<!--Start Of Books-->
+<div class="container">
+    <div class="row">
+        <% books.forEach(function(book){ %>
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading"><%= book.subject %></div>
+                    <div class="panel-body"><h4><%= book.author %> </h4></div>
+                    <div class="panel-footer"><a href="/books/<%= book._id %>" class="btn btn-block buybtn">More Info</a></div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+
+<% include ../partials/footer %>

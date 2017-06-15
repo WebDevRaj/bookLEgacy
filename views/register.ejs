@@ -1,0 +1,86 @@
+<% include ./partials/header %>
+
+
+<div class="container">
+    <!-- <h1>Sign Up!</h1>
+ -->
+    <!-- <form class="col-md-10" action="/register" method="POST" class="form-horizontal">
+        <div class="form-group">
+            <input class="form-control" type="text" name="name" placeholder="name" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="email" name="email" placeholder="email" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="number" name="phone" placeholder="phone" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" name="username" placeholder="username" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="password" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="password" name="confirmpassword" placeholder="confirm password" required>
+        </div>
+        <button class="btn btn-success btn-lg">Sign Up</button>
+    </form> -->
+    
+
+<div class="main">
+    <h1>Registration Form</h1>
+    <p class="agile_para">Fill up the following form to start selling your books.</p>
+    <div class="main_grid">
+        <form action="/register" method="post">
+            <span>
+                <label>name</label>
+                <input name="name" type="text" placeholder="First Name" required="">
+            </span>
+            <span>
+                <label>email</label>
+                <input name="email" type="email" placeholder="Your Email" required="">
+            </span>
+            <span>
+                <label>Username</label>
+                <input name="username" type="text" placeholder="Unique username" required="">
+            </span>
+            <span>
+                <label>Password</label>
+                <input name="password" type="password" id="password1" placeholder="Your Password" required="">
+            </span>
+            <span>
+                <label>Password</label>
+                <input name="confirmpassword" type="Password" id="password2" placeholder="Confirm Password" required="">
+            </span>
+            <span>
+                <label>Mobile</label>
+                <input name="phone" type="text" placeholder="Mobile Number" required="">
+            </span>
+            <div class="submit">
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </div>
+        </form>
+    </div>  
+</div>
+</div>
+
+<!-- password -->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("password1").onchange = validatePassword;
+            document.getElementById("password2").onchange = validatePassword;
+        }
+        function validatePassword(){
+            var pass2=document.getElementById("password2").value;
+            var pass1=document.getElementById("password1").value;
+            if(pass1!=pass2)
+                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+            else
+                document.getElementById("password2").setCustomValidity('');  
+                //empty string means no validation error
+        }
+    </script>
+<!-- password -->
+
+<% include ./partials/footer %>

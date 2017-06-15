@@ -1,0 +1,496 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+body {
+	margin: 0 0 45px;
+    padding-top: 45px;
+    background: url("/images/bg.jpg") top right no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+.thumbnail img {
+	width: 100%;
+}
+
+.thumbnail {
+    color: black;
+	padding: 0;
+}
+
+.thumbnail .caption-full {
+	padding: 9px;
+}
+
+.carousel-logo {
+     height:30%;
+     width:30%;
+
+     -webkit-filter: drop-shadow(5px 5px 5px #222);
+     filter: drop-shadow(5px 5px 5px #222);
+}
+
+#delete-form {
+	display: inline;
+}
+
+#loginbtn {
+
+	margin: 0.8em;
+}
+
+#filterbtn {
+	width: 98%;
+	position: relative;
+	margin: 1em;
+}
+
+#flash {
+	margin-top: 15px;
+}
+
+#myCarousel {
+	margin-top: -6%;
+}
+
+#logo {
+    height:30px;
+    width:30px;
+    float: left;
+    margin-right: 10px;
+    margin-top: -3px;
+}
+
+.outer {
+    border: 0.2px solid grey;
+    text-align: center;
+    vertical-align: middle;
+
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 200px;
+    color: white;
+    height: 200px;
+    font-weight: bold;
+    width: 200px;
+    display: table;
+    margin: 20px auto;
+    padding-top: 25px;
+    box-shadow: 12px 15px 48px -20px rgba(61,64,66,1);
+}
+
+.outer:hover {
+    border-width: 1px;
+    box-shadow: inset 12px 15px 48px -18px rgba(61,64,66,1);
+    text-decoration: none;
+}
+
+.action h3{
+    text-decoration: none;
+}
+
+footer {
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 45px;
+    width: 100%;
+    overflow:hidden;    
+}
+
+.buybtn {
+    background: black;
+    color: white;
+}
+   
+/* Full-width input fields */
+.login-form {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.email {
+    position: relative;
+    margin-top: 10px;
+    z-index: 2;
+}
+/* Set a style for all buttons */
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: inherit;
+    border-radius: 50%;
+}
+
+
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+    color: black;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+#landing {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+        
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: 0;
+        } h1#tem{
+            text-align:center; color:currentColor; font-family: cursive; font-size: 45px;
+        }
+        
+#img1{ 
+    padding:25px;
+    margin:0px; 
+    text-align:center; 
+    background: rgba(200,200,200,0.2); 
+    color:white;
+}
+
+.pnc{ overflow:hidden;}
+        .footer{ width:100%; background-color:black; color:antiquewhite; text-align: center; margin:0px; padding:5px;}
+        h1#cu a{ color:aqua;}
+
+.panel-heading{ background-color: black; color: navajowhite;}
+
+.panel-body {
+    color: black;
+}
+
+/*Register Page*/
+.main_grid input::-webkit-input-placeholder {
+    color: #ccc !important;
+}
+.main_grid input::-moz-placeholder {
+    color: #ccc !important;
+}
+.main_grid input::-ms-input-placeholder {
+    color: #ccc !important;
+}
+
+
+.main_grid input[type="submit"],a,input[type="reset"]{
+    transition:.5s ease-in;
+    -webkit-transition:.5s ease-in;
+    -moz-transition:.5s ease-in;
+    -o-transition:.5s ease-in;
+    -ms-transition:.5s ease-in;
+}
+
+.main_grid{
+    padding:2em;
+    background:rgba(0, 0, 0, 0.22);
+    margin-bottom: 50px;
+}
+
+.main_grid form span{
+    display:block;
+    margin-bottom: 1em;
+}
+.main_grid span label{
+    width: 22%;
+    font-size: .85em;
+    color: #212121;
+    background: #e9e9e9;
+    display: inline-block;
+    padding: 13px;
+    text-transform: uppercase;
+    float: left;
+    letter-spacing: 2px;
+    text-align: center;
+    border: 1px solid #e9e9e9;  
+}
+.main_grid input[type="text"],.main_grid input[type="email"],.main_grid select,
+.main_grid input[type="password"]{
+    padding: 13px 15px;
+    color: white;
+    outline: none;
+    width: 67.4%;
+    font-size: .85em;
+    background: none;
+    border: 1px solid #e9e9e9;
+}
+.main_grid select{
+    width:73% !important;
+    padding: 12px 15px !important;
+}
+.main_grid .submit{
+    padding:1em 0 0;
+}
+.main_grid .submit input[type="submit"], .submit input[type="reset"] {
+    padding: 13px 0px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: #fff;
+    cursor: pointer;
+    width: 30%;
+}
+.main_grid .submit input[type="submit"],.submit input[type="reset"]:hover {
+    background: #f1730f;
+}
+.main_grid .submit input[type="submit"]{
+    margin-right:1em;
+}
+.main_grid .submit input[type="reset"],.submit input[type="submit"]:hover {
+    background: #1dc3fb;
+}
+
+
+@media (max-width: 768px){
+    .main h1 {
+        font-size: 2.2em;
+    }
+    .main_grid input[type="text"], .main_grid input[type="email"], .main_grid select, .main_grid input[type="password"] {
+        width: 66.7%;
+    }
+    .main_grid select {
+        width: 72.55% !important;
+    }
+    .main_grid span label {
+        font-size: .8em;
+    }
+}
+@media (max-width: 736px){
+    .main_grid input[type="text"], .main_grid input[type="email"], .main_grid select, .main_grid input[type="password"] {
+        width: 66.1%;
+        padding: 12px 15px;
+    }
+    .main_grid span label {
+        font-size: .7em;
+    }
+    .main_grid select {
+        padding: 11px 15px !important;
+    }
+}
+@media (max-width: 667px){
+    
+    .main_grid input[type="text"], .main_grid input[type="email"], .main_grid select, .main_grid input[type="password"] {
+        width: 64.8%;
+    }
+    .main_grid select {
+        width: 71.7% !important;
+    }
+    .main_grid span label {
+        letter-spacing: 1px;
+    }
+}
+@media (max-width: 640px){
+    .w3_agile_main_grids {
+        width: 90%;
+    }
+    .main_grid input[type="text"], .main_grid input[type="email"], .main_grid select, .main_grid input[type="password"] {
+        width: 65.6%;
+    }
+    .main_grid select {
+        width: 72.1% !important;
+    }
+}
+@media (max-width: 600px){
+    .main h1 {
+        font-size: 2em;
+    }
+    .agile_para {
+        width: 90%;
+    }
+    .main_grid input[type="text"], .main_grid input[type="email"], .main_grid select, .main_grid input[type="password"] {
+        width: 64.7%;
+    }
+    .main_grid select {
+        width: 71.7% !important;
+    }
+    .agileits_copyright p {
+        font-size: 14px;
+        margin: 2em 0 0;
+    }
+}
+@media (max-width: 568px){
+    .main_grid {
+        padding: 1.5em;
+    }
+    .main_grid input[type="text"], .main_grid input[type="email"], .main_grid select, .main_grid input[type="password"] {
+        width: 64.4%;
+    }
+    .w3_agileits_submit input[type="submit"], .w3_agileits_submit input[type="reset"] {
+        padding: 12px 0px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px){
+    .main h1 {
+        font-size: 1.8em;
+    }
+    .agile_para {
+        font-size: 13px;
+    }
+    .main {
+        margin: 2em auto;
+    }
+    .main_grid span label {
+        width: 27%;
+    }
+    .main_grid input[type="text"], .main_grid input[type="email"], .main_grid select, .main_grid input[type="password"] {
+        width: 56.4%;
+    }
+    .main_grid select {
+        width: 65% !important;
+    }
+    .agileits_copyright p {
+        font-size: 13px;
+        margin: 1em 0 0;
+    }
+}
+@media (max-width: 414px){
+    .main h1 {
+        font-size: 1.6em;
+    }
+    .main_grid span label {
+        width: 91%;
+        display: block;
+    }
+    .main_grid input[type="text"], .main_grid input[type="email"], .main_grid select, .main_grid input[type="password"] {
+        width: 89.6%;
+    }
+    .main_grid select {
+        width: 100% !important;
+    }
+    .w3_agileits_submit input[type="submit"], .w3_agileits_submit input[type="reset"] {
+        padding: 9px 0px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 384px){
+    .main h1 {
+        font-size: 1.5em;
+    }
+    .agile_para {
+        margin: 1em auto 1.5em;
+    }
+    .main_grid input[type="text"], .main_grid input[type="email"], .main_grid select, .main_grid input[type="password"] {
+        width: 88.6%;
+    }
+    .main_grid span label {
+        width: 90%;
+    }
+}
+@media (max-width: 320px){
+    .main h1 {
+        font-size: 1.3em;
+        letter-spacing: 1px;
+    }
+    .main_grid h3 {
+        font-size: 1.2em;
+    }
+    .main_grid {
+        padding: 1em;
+    }
+    .main_grid span label {
+        width: 88.2%;
+    }
+    .main_grid input[type="text"], .main_grid input[type="email"], .main_grid select, .main_grid input[type="password"] {
+        width: 86.6%;
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+    .w3_agileits_submit input[type="submit"], .w3_agileits_submit input[type="reset"] {
+        width: 45%;
+    }
+}

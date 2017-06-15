@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>bookLEgacy : Buy and Sell Books</title>
+    <link rel="icon" type="icon/png" href="images/logo.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/bs/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <script src="/javascript/jquery-3.1.1.min.js"></script>
+    <script src="/javascript/bootstrap.js"></script>
+    <script type="text/javascript" src="/javascript/main.js"></script>
+    <meta name="keywords" content="SVIET, SELL, BOOKS, OLD, NEW, SVIET,  Swami, vivekanand">
+    <meta name="description" content="Buy and sell old and new books online swami vivekanand group  of colleges">
+    
+    
+</head>
+
+<body>
+<!---Start of Menu-->
+            
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+    <div class="container-fluid">
+  
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                    
+      </button>
+      <a class="navbar-brand" href="/"><img id="logo" src="images/logo-invert.png" alt="bookLEgacy">  bookLEgacy</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="services.html">Services <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/books"><i>Buy</i></a></li>
+            <li><a href="/books/new"><i>Sell</i></a></li>
+            <li><a href="/books/demand"><i>Demand</i></a></li>
+          </ul>
+        </li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/help">Help</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if(!currentUser){ %>
+        
+        <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <!--Log in modal-->
+        <li> <!-- Button to open the modal login form -->
+        <button id="loginbtn" class="btn btn-sm btn-danger"onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+        <% } else { %>
+            <li><a href="/profile">Signed in as <%= currentUser.username %></a></li>
+            <li><a href="/logout">Logout</a></li>
+        <% } %>
+        <!-- The Modal -->
+        <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none'"
+         class="close" title="Close Modal">&times;</span>
+
+          <!-- Modal Content -->
+          <form class="modal-content animate" action="/login" method="POST">
+            <div class="imgcontainer">
+              <img src="images/uderlogin.png"  height="75" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container-fluid">
+              <label><b>Username</b></label>
+              <input type="text" class="login-form" placeholder="Enter Username" name="username" required>
+
+              <label><b>Password</b></label>
+              <input type="password" class="login-form" placeholder="Enter Password" name="password" required>
+
+              <button id="loginbtn" class="btn btn-xl btn-danger "type="submit">Login</button>
+              <input type="checkbox" checked="checked"> Remember me
+            </div>
+
+            <div  style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-success btn-block">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+        </div>
+            
+            
+            <!--<a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a--></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        <!--END OF MENU-->
+
+        <% if(currentUser && currentUser.verified == false){ %>
+          <div class="container-fluid email">
+            <div class="alert alert-warning">Please Verify your E-Mail</div>
+          </div>
+        <% } %>
+        
+
+        <div class="container-fluid" id="flash">
+            <% if(error && error.length > 0){ %>
+                <div class="alert alert-danger" role="alert"><%= error %>
+                </div>
+            <% } %>
+            <% if(success && success.length > 0){ %>
+                <div class="alert alert-success" role="alert"><%= success %>
+                </div>
+            <% } %>
+        </div>
+   
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    </script>

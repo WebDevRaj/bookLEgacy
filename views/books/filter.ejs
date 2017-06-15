@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+
+<div class="container text-center">
+    <form action="/books/filter" method="POST">
+        
+        <label>
+        Department:
+            <select name="department"> 
+                <option>Applied Science</option>
+                <option>CSE</option>
+                <option>ME</option>
+                <option>Civil</option>
+                <option>ECE</option>
+            </select>
+        </label>
+        <br>
+        <label>
+        Semester:
+            <select name="semester">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+            </select> 
+        </label>
+        <br>
+        <input class="btn btn-success" type="submit">
+    </form>
+</div>
+
+<% include ../partials/footer %>
